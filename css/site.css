@@ -260,4 +260,12 @@ body {
   .the-modern-promo a:hover {
     color: #a5623a;
   }
+
+  .the-modern-promo a.claws-link {
+    color: #020617;
+  }
+
+  .the-modern-promo a.claws-link:hover {
+    color: #0f172a;
+  }
 }
