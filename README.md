@@ -15,6 +15,21 @@ See it live at [merimerimeri.com](https://merimerimeri.com).
 
 `bundle exec jekyll serve`
 
+## CI
+
+Every pull request (and push to non-main branches) runs a build check via GitHub Actions to catch errors before merging. The workflow installs Ruby/Node dependencies and runs:
+
+```bash
+bundle exec jekyll build
+```
+
+To run the same check locally:
+
+```bash
+bundle install && npm install
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
 ## Deployment
 
-Pushing to `main` triggers a GitHub Actions workflow that builds the Jekyll site and deploys it to Cloudflare Pages.
+Pushing to `main` triggers a separate GitHub Actions workflow that builds the Jekyll site and deploys it to Cloudflare Pages.
