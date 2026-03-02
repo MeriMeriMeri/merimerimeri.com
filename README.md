@@ -6,6 +6,8 @@ See it live at [merimerimeri.com](https://merimerimeri.com).
 
 ## Development
 
+Requires Ruby and Node.js. Versions are pinned in `.ruby-version` and `.nvmrc`.
+
 ### Installing dependencies
 
 1. `bundle install`
