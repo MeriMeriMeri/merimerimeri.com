@@ -31,6 +31,7 @@ pipeline {
                 sh 'bundle install'
                 sh 'npm ci'
                 sh 'bundle exec jekyll build'
+                sh 'chown -R 1000:1000 .'
             }
         }
         stage('Deploy') {
