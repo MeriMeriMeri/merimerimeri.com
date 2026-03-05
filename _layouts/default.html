@@ -7,6 +7,17 @@
 
   <body class="py-16 px-8 max-w-[650px] mx-auto text-neutral-800 font-serif leading-7">
     <main class="mt-0 md:mt-16">{{ content }}</main>
+
+    <footer class="mt-16 pt-8 border-t border-gray-200 text-sm text-gray-500">
+      <div class="flex justify-between items-center">
+        <span>&copy; {{ 'now' | date: '%Y' }} MeriMeriMeri Software LLC</span>
+        <nav class="flex gap-4">
+          <a href="/" class="hover:text-gray-900">Home</a>
+          <a href="/writing/" class="hover:text-gray-900">Writing</a>
+          <a href="/about/" class="hover:text-gray-900">About</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 
   <script>
@@ -29,6 +40,18 @@
 
       Enjoy the rest of your ${weekdays[today.getDay()]}.
    `);
+
+    // Track page views
+    fetch('/api/analytics', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        page: window.location.pathname,
+        referrer: document.referrer,
+        userAgent: navigator.userAgent,
+        timestamp: new Date().toISOString()
+      })
+    }).catch(() => {});
   </script>
 
 </html>

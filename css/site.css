@@ -246,6 +246,59 @@ body {
     color: rgba(255, 255, 255, 0.8);
   }
 
+  /* Claws - Task management aesthetic */
+  .product-card.claws {
+    @apply border-0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+  }
+
+  .product-card.claws:hover {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  }
+
+  .product-card.claws .product-name {
+    color: #38bdf8;
+  }
+
+  .product-card.claws .product-tagline {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .claws-decoration {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0 1.5rem 1.5rem;
+    width: fit-content;
+  }
+
+  @media (min-width: 640px) {
+    .claws-decoration {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+    }
+  }
+
+  .claw-item {
+    font-size: 11px;
+    font-family: ui-monospace, monospace;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.8);
+    border-left: 3px solid #38bdf8;
+  }
+
+  .claw-item.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+    border-left-color: #4ade80;
+  }
+
   /* The Modern promo */
   .the-modern-promo {
     @apply mt-8 text-sm;

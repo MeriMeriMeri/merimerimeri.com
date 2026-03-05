@@ -12,6 +12,10 @@ module.exports = {
       colors: {
         primary: '#FFFFFA',
         secondary: '#F5F4E9',
+        accent: '#c4784a',
+      },
+      fontSize: {
+        '7xl': '5rem',
       },
     },
   },

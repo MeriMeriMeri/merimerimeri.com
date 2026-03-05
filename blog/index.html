@@ -17,10 +17,11 @@ description: Updates, notes, and links to the best things I'm reading.
     Thoughts on technology, the best things I’ve read, and whatever else I’m excited about.
   </p>
 
-  <ul class="space-y-1 list-disc list-inside pl-0">
+  <ul class="space-y-3 list-none pl-0">
     {% for post in site.posts %}
-    <li class="pl-1">
+    <li class="pl-0">
       <a href="{{ post.url }}" class="underline underline-offset-[2.5px]">{{ post.title }}</a>
+      <span class="block text-sm text-gray-500">{{ post.date | date: "%B %-d, %Y" }}</span>
     </li>
     {% endfor %}
   </ul>
