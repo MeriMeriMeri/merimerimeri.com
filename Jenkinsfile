@@ -30,6 +30,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'rm -rf *'
                 unstash 'source'
                 sh 'curl -fsSL https://deb.nodesource.com/setup_20.x | bash -'
                 sh 'apt-get install -y nodejs'
