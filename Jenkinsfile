@@ -1,15 +1,11 @@
 pipeline {
-    agent none
+    agent any
     environment {
         JEKYLL_ENV = 'production'
         GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no'
     }
-    options {
-        skipDefaultCheckout()
-    }
     stages {
         stage('Checkout') {
-            agent any
             steps {
                 checkout([
                     $class: 'GitSCM',
@@ -19,7 +15,6 @@ pipeline {
                         credentialsId: 'github-ssh-key'
                     ]]
                 ])
-                stash name: 'source'
             }
         }
         stage('Build') {
@@ -27,17 +22,15 @@ pipeline {
                 docker {
                     image 'ruby:3.3.4'
                     args '-u root'
+                    reuseNode true
                 }
             }
             steps {
-                sh 'rm -rf ..?* .[!.]* *'
-                unstash 'source'
                 sh 'curl -fsSL https://deb.nodesource.com/setup_20.x | bash -'
                 sh 'apt-get install -y nodejs'
                 sh 'bundle install'
                 sh 'npm ci'
                 sh 'bundle exec jekyll build'
-                stash includes: '_site/**', name: 'site'
             }
         }
         stage('Deploy') {
@@ -45,6 +38,7 @@ pipeline {
                 docker {
                     image 'node:20'
                     args '-u root'
+                    reuseNode true
                 }
             }
             environment {
@@ -52,7 +46,6 @@ pipeline {
                 CLOUDFLARE_ACCOUNT_ID = credentials('cloudflare-account-id')
             }
             steps {
-                unstash 'site'
                 sh 'npx wrangler pages deploy _site --project-name=merimerimeri'
             }
         }
