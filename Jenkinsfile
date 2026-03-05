@@ -1,10 +1,29 @@
+@Library('claude-code-reviewer') _
+
 pipeline {
     agent any
+    parameters {
+        string(name: 'PR_NUMBER', defaultValue: '', description: 'Pull request number to review (leave blank to skip review)')
+    }
     environment {
         JEKYLL_ENV = 'production'
         GIT_SSH_COMMAND = 'ssh -o StrictHostKeyChecking=no'
     }
     stages {
+        stage('Claude Code Review') {
+            when {
+                expression { params.PR_NUMBER }
+            }
+            steps {
+                claudeReview(
+                    githubTokenCredentialsId: 'github-token',
+                    awsCredentialsId: 'aws-bedrock-creds',
+                    awsRegion: 'us-east-1',
+                    prNumber: params.PR_NUMBER,
+                    githubRepo: 'merimerimeri/merimerimeri.com',
+                )
+            }
+        }
         stage('Checkout') {
             steps {
                 checkout([
