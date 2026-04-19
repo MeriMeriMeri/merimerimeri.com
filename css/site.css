@@ -246,6 +246,51 @@ body {
     color: rgba(255, 255, 255, 0.8);
   }
 
+  /* Food Fight - warm arcade aesthetic */
+  .product-card.foodfight {
+    @apply border-0;
+    background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%);
+    color: white;
+  }
+
+  .product-card.foodfight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.18), transparent 40%);
+    pointer-events: none;
+  }
+
+  .foodfight-decoration {
+    margin: 0 1.5rem 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.15em;
+    width: fit-content;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (min-width: 640px) {
+    .foodfight-decoration {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+    }
+  }
+
+  .product-card.foodfight:hover {
+    background: linear-gradient(135deg, #9a3412 0%, #ea580c 100%);
+  }
+
+  .product-card.foodfight .product-name {
+    color: #fdba74;
+  }
+
+  .product-card.foodfight .product-tagline {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
   /* The Modern promo */
   .the-modern-promo {
     @apply mt-8 text-sm;
