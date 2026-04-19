@@ -246,6 +246,72 @@ body {
     color: rgba(255, 255, 255, 0.8);
   }
 
+  /* Food Fight - collaborative dinner picker */
+  .product-card.foodfight {
+    @apply border-0;
+    background: linear-gradient(180deg, #020617 0%, #101938 56%, #311065 100%);
+    color: white;
+  }
+
+  .product-card.foodfight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 72% 82%, rgba(139, 92, 246, 0.35), transparent 32%),
+      radial-gradient(circle at 64% 50%, rgba(37, 99, 235, 0.14), transparent 28%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%);
+    pointer-events: none;
+  }
+
+  .foodfight-decoration {
+    margin: 0 1.5rem 1.5rem;
+    width: min(100%, 12rem);
+  }
+
+  .foodfight-actions {
+    display: block;
+  }
+
+  .foodfight-action {
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.9rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-align: center;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.18);
+  }
+
+  .foodfight-action-primary {
+    background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
+    color: white;
+  }
+
+  @media (min-width: 640px) {
+    .foodfight-decoration {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+    }
+  }
+
+  .product-card.foodfight:hover {
+    background: linear-gradient(180deg, #060b1a 0%, #15214a 56%, #3b1380 100%);
+  }
+
+  .product-card.foodfight .product-name {
+    color: #f8fafc;
+  }
+
+  .product-card.foodfight .product-tagline {
+    color: rgba(203, 213, 225, 0.82);
+  }
+
   /* The Modern promo */
   .the-modern-promo {
     @apply mt-8 text-sm;
