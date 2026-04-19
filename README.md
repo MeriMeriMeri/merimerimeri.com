@@ -12,8 +12,16 @@ Requires Ruby and Node.js. Versions are pinned in `.ruby-version` and `.nvmrc`.
 
 ### Installing dependencies
 
-1. `bundle install`
-2. `npm install`
+Prerequisites:
+
+1. Ruby 3.3.x
+2. Node.js/npm
+
+Install app dependencies with:
+
+`./bin/setup`
+
+This installs Bundler if needed, then runs `bundle install` and `npm ci`.
 
 ### Running the website
 
