@@ -415,12 +415,6 @@ body {
     box-shadow: 0 14px 28px rgba(124, 58, 237, 0.28);
   }
 
-  .foodfight-action-secondary {
-    color: rgba(226, 232, 240, 0.9);
-    background: rgba(15, 23, 42, 0.48);
-    border-color: rgba(148, 163, 184, 0.28);
-  }
-
   @media (min-width: 640px) {
     .product-card.foodfight .product-content {
       max-width: 52%;
