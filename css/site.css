@@ -60,12 +60,33 @@ body {
   .site-nav a,
   .site-footer a,
   .section-copy a,
-  .link-list a {
+  .link-list a,
+  .elsewhere-list a {
     @apply underline underline-offset-[3px] hover:text-neutral-900;
   }
 
   .intro {
     @apply mb-8;
+  }
+
+  .intro-with-photo {
+    @apply flex flex-col gap-6;
+  }
+
+  .profile-photo {
+    @apply order-first h-28 w-28 rounded-lg object-cover;
+  }
+
+  @media (min-width: 640px) {
+    .intro-with-photo {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 8.5rem;
+      align-items: start;
+    }
+
+    .profile-photo {
+      @apply order-none h-[8.5rem] w-[8.5rem] mt-8;
+    }
   }
 
   .intro h1 {
@@ -102,6 +123,32 @@ body {
 
   .link-list p {
     @apply text-neutral-700;
+  }
+
+  .elsewhere-list,
+  .plain-list {
+    @apply grid gap-3 text-neutral-700;
+  }
+
+  .elsewhere-list li,
+  .plain-list li {
+    @apply list-none;
+  }
+
+  .elsewhere-list li {
+    @apply grid gap-1 sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-4;
+  }
+
+  .elsewhere-list a {
+    @apply text-neutral-900;
+  }
+
+  .elsewhere-list span {
+    @apply text-neutral-700;
+  }
+
+  .plain-list strong {
+    @apply text-neutral-900 font-semibold;
   }
 
   .site-footer {
