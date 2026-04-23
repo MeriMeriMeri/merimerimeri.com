@@ -1,96 +1,108 @@
 ---
 layout: default
+description: "Personal site for Stephen Meriwether: software, AI, LLMs, projects, writing, and a few things worth keeping simple."
 ---
 
+<nav class="site-nav" aria-label="Primary navigation">
+  <a href="#projects">Projects</a>
+  <a href="/writing/">Writing</a>
+  <a href="/consulting/">Consulting</a>
+</nav>
+
 <section class="pb-16">
-  <header class="mb-6">
-    <h1 class="text-xl md:text-2xl mb-1 font-medium leading-13">
-      MeriMeriMeri Software
-    </h1>
+  <header class="intro">
+    <p class="eyebrow">Rochester, New York</p>
+    <h1>Stephen Meriwether</h1>
+    <p class="intro-copy">
+      Independent software consultant. Building small, focused products. Obsessed with what AI changes, and what it does not.
+    </p>
   </header>
 
-  <div class="mb-12">
+  <div class="section-copy">
     <p>
-      Most software tries to do too much. We build small, focused products that do a few things really well.
+      I help teams build better software, ship my own small products, experiment with AI tools, talk on <a href="https://themodern.fm/" target="_blank" rel="noopener noreferrer">The Modern Podcast Network</a>, and <a href="https://www.flickr.com/photos/stephenmeriwetherhocker/" target="_blank" rel="noopener noreferrer">sometimes take photos</a>.
     </p>
   </div>
 
-  <div class="grid gap-6">
-    <a href="https://menumines.app/" class="product-card menumines" target="_blank" rel="noopener noreferrer">
-      <div class="product-content">
-        <div class="product-name">MenuMines</div>
-        <div class="product-tagline">Minesweeper in your menu bar.</div>
-      </div>
-      <div class="menumines-decoration">
-        <div class="mine-cell"></div>
-        <div class="mine-cell"></div>
-        <div class="mine-cell revealed num-1">1</div>
-        <div class="mine-cell revealed num-1">1</div>
-        <div class="mine-cell"></div>
-        <div class="mine-cell revealed num-1">1</div>
-        <div class="mine-cell revealed num-2">2</div>
-        <div class="mine-cell revealed num-3">3</div>
-        <div class="mine-cell revealed num-1">1</div>
-        <div class="mine-cell revealed num-1">1</div>
-        <div class="mine-cell flag">⚑</div>
-        <div class="mine-cell revealed num-2">2</div>
-      </div>
-    </a>
+  <section id="projects" class="section-block" aria-labelledby="projects-heading">
+    <div class="section-heading">
+      <h2 id="projects-heading">Projects</h2>
+    </div>
 
-    <a href="https://historicalfantasyfootballstats.com/" class="product-card hffs" target="_blank" rel="noopener noreferrer">
-      <div class="product-content">
-        <div class="product-name">Historical Fantasy Football Stats</div>
-        <div class="product-tagline">Compare fantasy performance across the last 55 years.</div>
-      </div>
-      <div class="hffs-decoration">
-        <div class="stats-row">
-          <span class="player">LT</span>
-          <span class="pts">481.1</span>
-          <span class="year">2006</span>
+    <div class="grid gap-6">
+      <a href="https://menumines.app/" class="product-card menumines" target="_blank" rel="noopener noreferrer">
+        <div class="product-content">
+          <div class="product-name">MenuMines</div>
+          <div class="product-tagline">Minesweeper in your menu bar.</div>
         </div>
-        <div class="stats-row">
-          <span class="player">CMC</span>
-          <span class="pts">469.2</span>
-          <span class="year">2019</span>
+        <div class="menumines-decoration">
+          <div class="mine-cell"></div>
+          <div class="mine-cell"></div>
+          <div class="mine-cell revealed num-1">1</div>
+          <div class="mine-cell revealed num-1">1</div>
+          <div class="mine-cell"></div>
+          <div class="mine-cell revealed num-1">1</div>
+          <div class="mine-cell revealed num-2">2</div>
+          <div class="mine-cell revealed num-3">3</div>
+          <div class="mine-cell revealed num-1">1</div>
+          <div class="mine-cell revealed num-1">1</div>
+          <div class="mine-cell flag">⚑</div>
+          <div class="mine-cell revealed num-2">2</div>
         </div>
-        <div class="stats-row">
-          <span class="player">Faulk</span>
-          <span class="pts">455.9</span>
-          <span class="year">2000</span>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a href="https://foodfight.merimerimeri.com/" class="product-card foodfight" target="_blank" rel="noopener noreferrer">
-      <div class="product-content">
-        <div class="product-name">Food Fight</div>
-        <div class="product-tagline">Settle the "where should we eat?" debate.</div>
-      </div>
-      <div class="foodfight-decoration" aria-hidden="true">
-        <div class="foodfight-actions">
-          <div class="foodfight-action foodfight-action-primary">Find a place to eat</div>
+      <a href="https://historicalfantasyfootballstats.com/" class="product-card hffs" target="_blank" rel="noopener noreferrer">
+        <div class="product-content">
+          <div class="product-name">Historical Fantasy Football Stats</div>
+          <div class="product-tagline">Compare fantasy performance across the last 55 years.</div>
         </div>
-      </div>
-    </a>
-  </div>
+        <div class="hffs-decoration">
+          <div class="stats-row">
+            <span class="player">LT</span>
+            <span class="pts">481.1</span>
+            <span class="year">2006</span>
+          </div>
+          <div class="stats-row">
+            <span class="player">CMC</span>
+            <span class="pts">469.2</span>
+            <span class="year">2019</span>
+          </div>
+          <div class="stats-row">
+            <span class="player">Faulk</span>
+            <span class="pts">455.9</span>
+            <span class="year">2000</span>
+          </div>
+        </div>
+      </a>
 
-  <div class="the-modern-promo">
-    <span>Supported by a small team of</span>
-    <a href="https://claws.merimerimeri.com/" class="claws-link" target="_blank" rel="noopener noreferrer">Claws</a>.
-    <span>Also building community at</span>
-    <a href="https://themodernhq.com/" target="_blank" rel="noopener noreferrer">The Modern</a>.
-  </div>
+      <a href="https://foodfight.merimerimeri.com/" class="product-card foodfight" target="_blank" rel="noopener noreferrer">
+        <div class="product-content">
+          <div class="product-name">Food Fight</div>
+          <div class="product-tagline">Settle the "where should we eat?" debate.</div>
+        </div>
+        <div class="foodfight-decoration" aria-hidden="true">
+          <div class="foodfight-actions">
+            <div class="foodfight-action foodfight-action-primary">Find a place to eat</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
 
-  <div class="mt-6 flex items-center gap-4 text-gray-600">
-    <a href="https://x.com/merisoft" target="_blank" rel="noopener noreferrer" class="hover:text-gray-900" aria-label="Follow us on X">
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-      </svg>
-    </a>
-    <a href="mailto:contact@merimerimeri.com" class="hover:text-gray-900" aria-label="Email us">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
-      </svg>
-    </a>
-  </div>
+  <section class="section-block link-list" aria-labelledby="elsewhere-heading">
+    <div class="section-heading">
+      <h2 id="elsewhere-heading">Elsewhere</h2>
+    </div>
+
+    <p>
+      My <a href="https://blog.merimerimeri.com/">blog</a> is short notes on software, AI, learning, sports, and ideas I want to remember. I also keep a small corner for <a href="https://claws.merimerimeri.com/" target="_blank" rel="noopener noreferrer">Claws</a>, help with community at <a href="https://themodernhq.com/" target="_blank" rel="noopener noreferrer">The Modern</a>, and put code on <a href="https://github.com/smeriwether" target="_blank" rel="noopener noreferrer">GitHub</a>.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <a href="mailto:stephen@merimerimeri.com">Email</a>
+    <a href="https://blog.merimerimeri.com/">Blog</a>
+    <a href="https://github.com/smeriwether" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://x.com/_smeriwether" target="_blank" rel="noopener noreferrer">X</a>
+  </footer>
 </section>

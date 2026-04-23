@@ -14,7 +14,8 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  background: #fffffa;
 }
 
 @layer base {
@@ -34,18 +35,16 @@ body {
     @apply text-black;
   }
 
-  #content {
-    p {
-      @apply mb-4;
-    }
+  #content p {
+    @apply mb-4;
+  }
 
-    blockquote {
-      @apply border-l-4 border-gray-300 pl-4 mb-4 text-gray-700;
-    }
+  #content blockquote {
+    @apply border-l-4 border-gray-300 pl-4 mb-4 text-gray-700;
+  }
 
-    a {
-      @apply underline hover:text-neutral-900;
-    }
+  #content a {
+    @apply underline hover:text-neutral-900;
   }
 }
 
@@ -54,9 +53,64 @@ body {
     @apply underline hover:text-neutral-900;
   }
 
+  .site-nav {
+    @apply mb-12 flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-500;
+  }
+
+  .site-nav a,
+  .site-footer a,
+  .section-copy a,
+  .link-list a {
+    @apply underline underline-offset-[3px] hover:text-neutral-900;
+  }
+
+  .intro {
+    @apply mb-8;
+  }
+
+  .intro h1 {
+    @apply text-2xl md:text-3xl font-medium leading-tight mb-4;
+  }
+
+  .eyebrow {
+    @apply mb-2 text-sm text-neutral-500;
+  }
+
+  .intro-copy {
+    @apply text-xl leading-8 text-neutral-900;
+  }
+
+  .section-copy {
+    @apply mb-12;
+  }
+
+  .section-block {
+    @apply mt-12;
+  }
+
+  .section-heading {
+    @apply mb-5;
+  }
+
+  .section-heading h2 {
+    @apply text-base font-semibold;
+  }
+
+  .section-heading p {
+    @apply mt-1 text-sm text-neutral-500;
+  }
+
+  .link-list p {
+    @apply text-neutral-700;
+  }
+
+  .site-footer {
+    @apply mt-12 flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-500;
+  }
+
   /* Product Cards - Base */
   .product-card {
-    @apply block rounded-xl no-underline transition-all duration-300;
+    @apply block rounded-lg no-underline transition-all duration-300;
     @apply border overflow-hidden;
     position: relative;
   }
@@ -275,7 +329,7 @@ body {
 
   .foodfight-action {
     padding: 0.55rem 0.75rem;
-    border-radius: 0.9rem;
+    border-radius: 8px;
     font-size: 0.72rem;
     font-weight: 700;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;

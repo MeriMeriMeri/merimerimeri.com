@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/MeriMeriMeri/merimerimeri.com/actions/workflows/ci.yml/badge.svg)](https://github.com/MeriMeriMeri/merimerimeri.com/actions/workflows/ci.yml)
 
-Website for MeriMeriMeri Software — a studio that builds focused, delightful software products.
+Personal site for Stephen Meriwether. Built with Jekyll, styled with Tailwind CSS, and deployed to Cloudflare Pages.
 
 See it live at [merimerimeri.com](https://merimerimeri.com).
 
